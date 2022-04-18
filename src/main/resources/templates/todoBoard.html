@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>testando</title>
+    <script src="https://unpkg.com/feather-icons" ></script>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css} "/>
+
+</head>
+    <body class="text-center">
+        <main style="width: 100%; max-width:660px; padding:15px; margin:auto">
+            <div class="container">
+                <div class="row row-cols-auto justify-content-center" style="margin-down: 100px">
+                    <h1 class="col">Bem vindo, </h1>
+                    <h1 class="col" th:text="${user.username}" style="margin-left:-15px"></h1>
+                </div>
+            </div>
+            <button class="btn btn-primary" id="newTaskButton" style="margin: 50px">Adicionar task</button>
+            <div class="task_list">
+                <div th:fragment="task_list">
+                    <div class="list-groups row" style="margin: 5px" th:each="task : ${todoBoard.tasks}">
+                        <label class="list-group-item d-flex gap-3 col" style="margin-right:5px;border-radius:5px;background-color:#e0e1e2">
+                            <input
+                                    class="form-check-input flex-shrink-0"
+                                    type="checkbox" th:checked="${task.completed}"
+                                    style="font-size: 1.375em;"
+                                    th:attr="onclick=|changeTaskCompletion('${task.id}')|"
+                            >
+                            <span class="pt-1 form-checked-content">
+                                <strong th:text="${task.task}"></strong>
+                            </span>
+                        </label>
+                        <button
+                                class="btn btn-secondary col col-1"
+                                style="margin-right:5px"
+                                th:attr="onclick=|editTask('${task.id}', '${task.task}')|"
+                        >
+                            <i data-feather="edit"></i>
+                        </button>
+                        <button
+                                class="btn btn-danger col col-1"
+                                th:attr="onclick=|deleteTask('${task.id}')|"
+                        >
+                            <i data-feather="trash-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+        <script th:inline="javascript">
+            feather.replace()
+
+            $("#newTaskButton").click(function(){
+                console.log("Entrou")
+                var title = prompt("Digite o título da tarefa: ", "Comprar leite (2x)")
+                addNewTask([[${todoBoard.id}]], title, false)
+            })
+
+            function addNewTask(todoBoardId, title, completed) {
+                var objRequest = new Object()
+                objRequest.title = title
+                objRequest.completed = completed
+
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:8080/todoboard/" + todoBoardId,
+                    contentType: "application/json",
+                    data: JSON.stringify(objRequest),
+                    success: function(data){
+                        $(".task_list").html(data)
+                        feather.replace()
+                    }
+                })
+            }
+
+            function deleteTask(taskId) {
+                var alertResponse = confirm("Tem certeza?")
+
+                if (alertResponse) {
+                    var objRequest = new Object()
+                    objRequest.taskId = taskId
+                    objRequest.todoBoardId = [[${todoBoard.id}]]
+
+                    $.ajax({
+                        type: "DELETE",
+                        url: "http://localhost:8080/todoboard/deleteTask/",
+                        contentType: "application/json",
+                        data: JSON.stringify(objRequest),
+                        success: function(data){
+                            $(".task_list").html(data)
+                            feather.replace()
+                        }
+                    })
+                } else {return}
+            }
+
+            function changeTaskCompletion(taskId){
+                var obj = new Object()
+                obj.taskId = taskId
+
+                $.ajax({
+                    type: "PUT",
+                    url: "http://localhost:8080/todoboard/completedTask/",
+                    contentType: "application/json",
+                    data: JSON.stringify(obj)
+                })
+            }
+
+
+            function editTask(taskId){
+                var title = prompt("Digite o título da tarefa: ")
+                var obj = new Object()
+                obj.taskId = taskId
+                obj.title = title
+                obj.todoBoardId = [[${todoBoard.id}]]
+
+                $.ajax({
+                    type: "PUT",
+                    url: "http://localhost:8080/todoboard/editedTaskTitle",
+                    contentType: "application/json",
+                    data: JSON.stringify(obj),
+                    success: function(data){
+                        $(".task_list").html(data)
+                        feather.replace()
+                    }
+                })
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+  # mysql
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todolist?reconnect=true
+    username: postgres
+    password: password
+
+security:
+  hash_salt: ${SECURITY_SALT}
