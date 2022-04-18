@@ -19,4 +19,9 @@ Linguagens & Softwares utilizados:
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+##
 
+##
+Como executar
+
+Após o pull request e com o Docker em funcionamento, inicializaremos o terminal na pasta do projeto e executamos o comando para inicializar o banco de dados 'docker-compose up -d'
