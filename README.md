@@ -10,7 +10,7 @@ O nosso To Do Board tem uma lista básica de funções, algumas delas são:
    * Atualizar e excluir tarefas da lista;
 <!--te-->
 ##
-Linguagens & Softwares utilizados:
+<h2>Linguagens & Softwares utilizados:</h2>
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
