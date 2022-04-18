@@ -21,6 +21,6 @@ Linguagens & Softwares utilizados:
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ##
 
-<h2 align="center">To Do Board - PRODAM</h2>
+<h2 align="center">Como executar</h2>
 
 Após o pull request e com o Docker em funcionamento, inicializaremos o terminal na pasta do projeto e executamos o comando para inicializar o banco de dados 'docker-compose up -d'
