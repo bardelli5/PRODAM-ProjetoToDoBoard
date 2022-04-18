@@ -27,4 +27,4 @@ Docker, Java 11 (ou posterior)
 
 <h2>Como executar</h2>
 
-Após o pull request e com o Docker em funcionamento, inicializaremos o terminal na pasta do projeto e executamos o comando para inicializar o banco de dados 'docker-compose up -d'
+Após o pull request e com o Docker em funcionamento, inicializaremos o terminal na pasta do projeto e executamos o comando para inicializar o banco de dados `docker-compose up -d`
