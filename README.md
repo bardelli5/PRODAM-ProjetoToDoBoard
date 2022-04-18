@@ -20,6 +20,9 @@ Linguagens & Softwares utilizados:
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ##
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+Docker, Java 11 (ou posterior)
+##
 
 <h2 align="center">Como executar</h2>
 
