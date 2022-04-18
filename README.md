@@ -24,7 +24,6 @@ Linguagens & Softwares utilizados:
 <h2>Pré-requisitos</h2>
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 Docker, Java 11 (ou posterior)
-##
 
 <h2>Como executar</h2>
 
