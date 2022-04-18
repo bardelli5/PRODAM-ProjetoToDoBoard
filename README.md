@@ -1,6 +1,6 @@
-<h1 align="center">ToDo Board - PRODAM</h1>
-Projeto cujo o usuário pode criar e manipular uma "To Do List". o usuário terá um login para o acesso da área de sua lista. Cada usuário utiliza apenas um login, ou seja, caso tiverem logins equivalentes (nome), o próprio programa recusaria a entrada dos dados informados e requisitaria informações de login diferentes.
-No projeto será utilizado o Framework Spring Boot para o back-end com banco de dados PostgreSQL, utilizando Thymeleaf para a parte do front-end. Para a manipulação do banco de dados, será utilizado o Hibernate/JPA.
+<h1 align="center">To Do Board - PRODAM</h1>
+  Projeto cujo o usuário pode criar e manipular uma "To Do List". o usuário terá um login para o acesso da área de sua lista. Cada usuário utiliza apenas um login, ou seja, caso tiverem logins equivalentes (nome), o próprio programa recusaria a entrada dos dados informados e requisitaria informações de login diferentes.
+  O projeto está utilizado o Framework Spring Boot para o back-end com banco de dados PostgreSQL, Thymeleaf para a parte do front-end. Para a manipulação do banco de dados, será utilizado o Hibernate/JPA.
 
 Tabela de conteúdos
 =================
