@@ -19,11 +19,13 @@ Linguagens & Softwares utilizados:
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+
 ##
+<h2>Pré-requisitos</h2>
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 Docker, Java 11 (ou posterior)
 ##
 
-<h2 align="center">Como executar</h2>
+<h2>Como executar</h2>
 
 Após o pull request e com o Docker em funcionamento, inicializaremos o terminal na pasta do projeto e executamos o comando para inicializar o banco de dados 'docker-compose up -d'
