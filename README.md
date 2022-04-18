@@ -5,7 +5,7 @@
 
 =================
 <!--ts-->
-O nosso To Do Board tem uma lista básica de funções de uma lista, algumas delas são:
+O nosso To Do Board tem uma lista básica de funções, algumas delas são:
    * Criar logins (usuário e senha);
    * Criar e visualizar registros de tarefas;
    * Incluir novos registros de tarefas;
