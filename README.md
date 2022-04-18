@@ -31,3 +31,8 @@ Após clonar o projeto e com o Docker em funcionamento, inicializaremos o termin
 
 
 Com a iniciação do Docker sucedida, executamos o comando `./mvnw spring-boot:run` para enfim, rodar a aplicação.
+
+Já com a aplicação rodando, na barra de pesquisa do seu navegador cole o endereçamento `localhost:8080` e desfrute das diversas funcionalidades que o projeto tem a oferecer :)
+
+##
+## Obrigado pela oportunidade!
